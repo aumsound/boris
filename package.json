@@ -1,0 +1,59 @@
+{
+  "name": "dragon-soul-landing",
+  "version": "1.0.0",
+  "description": "High-conversion landing page for Dragon Soul retreat on Koh Phangan, Thailand",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 8000 -c-1",
+    "dev": "npx http-server . -p 8000 -c-1 -o",
+    "build": "echo 'No build process needed for static site'",
+    "deploy": "gh-pages -d .",
+    "extract-pdf": "python extract_pdf_content.py",
+    "optimize-images": "npx imagemin extracted_content/images/* --out-dir=extracted_content/webp_images --plugin=webp",
+    "minify-css": "npx cleancss-cli -o styles.min.css styles.css",
+    "minify-js": "npx terser script.js -o script.min.js",
+    "lighthouse": "npx lighthouse http://localhost:8000 --output html --output-path lighthouse-report.html"
+  },
+  "keywords": [
+    "landing-page",
+    "conversion",
+    "retreat",
+    "thailand",
+    "koh-phangan",
+    "wellness",
+    "responsive",
+    "bilingual"
+  ],
+  "author": {
+    "name": "Boris Tikhonov",
+    "email": "contact@dragonsoul.com",
+    "url": "https://t.me/boristikhonov"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/dragon-soul-landing.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/dragon-soul-landing/issues"
+  },
+  "homepage": "https://yourusername.github.io/dragon-soul-landing",
+  "devDependencies": {
+    "gh-pages": "^6.1.0",
+    "http-server": "^14.1.1",
+    "imagemin": "^8.0.1",
+    "imagemin-webp": "^8.0.0",
+    "clean-css-cli": "^5.6.2",
+    "terser": "^5.26.0",
+    "lighthouse": "^11.4.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 

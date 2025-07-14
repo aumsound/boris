@@ -1,0 +1,7 @@
+# Exclude large files
+*.pdf
+*.m4a
+*.mp4
+*.mov
+.DS_Store
+extracted_content/
